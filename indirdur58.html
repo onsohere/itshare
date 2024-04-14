@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<link rel="icon" href="https://static.vecteezy.com/system/resources/previews/000/571/245/original/vector-share-web-icon.jpg" type="image/x-icon" />
+
+<meta property="og:title" content="Share.it | Share Photo&Video">
+<meta property="og:description" content="Sende arkadaşlarına görsel&video&gif&dosya gönder ve paylaş!">
+<meta property="og:image" content="https://th.bing.com/th/id/OIP.YX-VGZtE1bsPLrP11tQkrgHaHa?w=5000&h=5000&rs=1&pid=ImgDetMain">
+
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Share.it | Share Photo&Video</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #E2E2E2;
+    }
+
+    #container {
+      position: relative;
+    }
+
+    #hareketEdenButon {
+      background-color: purple;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 50px;
+      z-index: 1; /* Butonun metni ön planda kalsın */
+      transition: background-color 0.3s ease; /* Geçiş efekti ekle */
+    }
+
+    #hareketEdenButon:hover {
+      background-color: #0056b3; /* Hover durumunda arka plan rengini değiştir */
+    }
+
+ 
+
+    #hareketEdenResim {
+      display: none;
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      top: -60px; /* Butonun üzerinde 10px boşluk */
+      left: 0;
+      animation: hareket 5s infinite;
+      z-index: 9999;
+    }
+
+    @keyframes hareket {
+      0% { top: -60px; left: 0; }
+      25% { top: -60px; left: calc(100% - 50px); }
+      50% { top: calc(100% - 110px); left: calc(100% - 50px); }
+      75% { top: calc(100% - 110px); left: 0; }
+      100% { top: -60px; left: 0; }
+    }
+
+    #hareketEdenResim img {
+      width: 100%;
+      height: 100%;
+    }
+
+    #video {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+<!-- Container -->
+<div id="container">
+  <!-- Görüntü -->
+  <div id="butonUstGoruntu">
+<h1><img src="https://iv1.lisimg.com/image/21257204/740full-lydia-bielen.jpg" alt="" width="140" height="175" />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;SHARE.İT | DOSYA İNDİR&nbsp; &nbsp; &nbsp;&nbsp;<img src="https://th.bing.com/th/id/OIP.ly6_Sml58NPYQDK-j3v5fgHaJQ?w=1080&amp;h=1350&amp;rs=1&amp;pid=ImgDetMain" alt="" width="164" height="205" /><img style="display: block; margin-left: auto; margin-right: auto;" src="https://th.bing.com/th/id/R.b29267697aa27f28bf3215c48bca7dae?rik=ly%2flLzfpBeUY8A&amp;riu=http%3a%2f%2flh4.ggpht.com%2f_7wsQzULWIwo%2fSsivnShqw5I%2fAAAAAAAAB5Q%2fDP_u6oSdzZY%2fMBTAnimateddownloadbutton%5b5%5d.gif%3fimgmax%3d800&amp;ehk=g3E0YU%2bJZ663xLwJMerGrGBGRlLcIw7c5zNB0Kz%2fuFM%3d&amp;risl=&amp;pid=ImgRaw&amp;r=0" alt="" width="348" height="110" /></h1>
+<p style="text-align: center;"><strong>REKLAM VERMEK İ&Ccedil;İN İLETİŞİM KURUN.</strong></p>
+<p style="text-align: center;">&nbsp;</p>
+<p style="text-align: center;"><strong><img src="https://th.bing.com/th/id/R.be2aa8955c05efb52da7c495feea4746?rik=3PzTz7ILH%2bBwHA&amp;pid=ImgRaw&amp;r=0" alt="" width="331" height="64" /></strong></p>
+<p style="text-align: center;"><strong><span style="color: #ff9900;">SHARE.İT</span> | LİNK KISALT VE KAZAN!</strong></p>
+<hr />
+<p style="text-align: center;">&nbsp;</p>
+<p style="text-align: center;"><strong>GİDECEĞİNİZ SİTE: <span style="color: #00ff00;">G&Uuml;VENLİ</span></strong></p>
+<p style="text-align: center;"><strong><span style="color: #00ff00;"><img src="https://e7.pngegg.com/pngimages/623/4/png-clipart-emoji-iphone-%E7%B5%B5%E6%96%87%E5%AD%97-miscellaneous-symbols-and-pictographs-thumb-signal-ai-format-material-hand-emoticon-thumbnail.png" alt="" width="20" height="31" /><img src="https://e7.pngegg.com/pngimages/623/4/png-clipart-emoji-iphone-%E7%B5%B5%E6%96%87%E5%AD%97-miscellaneous-symbols-and-pictographs-thumb-signal-ai-format-material-hand-emoticon-thumbnail.png" alt="" width="20" height="31" /><img src="https://e7.pngegg.com/pngimages/623/4/png-clipart-emoji-iphone-%E7%B5%B5%E6%96%87%E5%AD%97-miscellaneous-symbols-and-pictographs-thumb-signal-ai-format-material-hand-emoticon-thumbnail.png" alt="" width="20" height="31" /><img src="https://e7.pngegg.com/pngimages/623/4/png-clipart-emoji-iphone-%E7%B5%B5%E6%96%87%E5%AD%97-miscellaneous-symbols-and-pictographs-thumb-signal-ai-format-material-hand-emoticon-thumbnail.png" alt="" width="20" height="31" /><img src="https://e7.pngegg.com/pngimages/623/4/png-clipart-emoji-iphone-%E7%B5%B5%E6%96%87%E5%AD%97-miscellaneous-symbols-and-pictographs-thumb-signal-ai-format-material-hand-emoticon-thumbnail.png" alt="" width="20" height="31" /><img src="https://e7.pngegg.com/pngimages/623/4/png-clipart-emoji-iphone-%E7%B5%B5%E6%96%87%E5%AD%97-miscellaneous-symbols-and-pictographs-thumb-signal-ai-format-material-hand-emoticon-thumbnail.png" alt="" width="20" height="31" /><img src="https://e7.pngegg.com/pngimages/623/4/png-clipart-emoji-iphone-%E7%B5%B5%E6%96%87%E5%AD%97-miscellaneous-symbols-and-pictographs-thumb-signal-ai-format-material-hand-emoticon-thumbnail.png" alt="" width="20" height="31" /><img src="https://e7.pngegg.com/pngimages/623/4/png-clipart-emoji-iphone-%E7%B5%B5%E6%96%87%E5%AD%97-miscellaneous-symbols-and-pictographs-thumb-signal-ai-format-material-hand-emoticon-thumbnail.png" alt="" width="20" height="31" /><img src="https://e7.pngegg.com/pngimages/623/4/png-clipart-emoji-iphone-%E7%B5%B5%E6%96%87%E5%AD%97-miscellaneous-symbols-and-pictographs-thumb-signal-ai-format-material-hand-emoticon-thumbnail.png" alt="" width="20" height="31" /><img src="https://e7.pngegg.com/pngimages/623/4/png-clipart-emoji-iphone-%E7%B5%B5%E6%96%87%E5%AD%97-miscellaneous-symbols-and-pictographs-thumb-signal-ai-format-material-hand-emoticon-thumbnail.png" alt="" width="20" height="31" /></span></strong></p>
+<p style="text-align: center;">&nbsp;</p>
+<p style="text-align: center;">&nbsp;</p>
+</div>
+<!-- Buton -->
+<p style="text-align: center;"><button id="hareketEdenButon">Devam Et</button>
+</p>
+
+<!-- Hareket Eden Resim -->
+<div id="hareketEdenResim">
+
+<!-- Video -->
+<video id="video" autoplay loop style="display: none;">
+  <source src="https://cdn.glitch.global/04b2e04c-f58e-492c-8856-56d51c7b0aa0/video?v=1712938613786" type="video/mp4">
+  Tarayıcınız video etiketini desteklemiyor.
+</video>
+
+<script>
+  document.getElementById('hareketEdenButon').addEventListener('click', function() {
+    var resim = document.getElementById('hareketEdenResim');
+    resim.style.display = 'block';
+    var video = document.getElementById('video');
+    video.style.display = 'block';
+    video.play();
+    var butonUstGoruntu = document.getElementById('butonUstGoruntu');
+    butonUstGoruntu.style.opacity = '0'; // Butonun üstündeki görüntüyü gizle
+    tamEkran();
+  });
+
+  function tamEkran() {
+    var element = document.documentElement;
+    if (element.requestFullscreen) {
+      element.requestFullscreen();
+    } else if (element.mozRequestFullScreen) {
+      element.mozRequestFullScreen();
+    } else if (element.webkitRequestFullscreen) {
+      element.webkitRequestFullscreen();
+    } else if (element.msRequestFullscreen) {
+      element.msRequestFullscreen();
+    }
+  }
+</script>
+
+</body>
+</html>
