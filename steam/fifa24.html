@@ -1,101 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" href="https://th.bing.com/th/id/R.0548deb921a5e9c7d24b5f4ac7c27297?rik=VCl4k2RMyOcDhg&pid=ImgRaw&r=0" type="image/x-icon" />
-<title>EA SPORTS FC™ 24 on Steam</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #E2E2E2;
-    overflow-x: hidden; /* Yatay scrollbar'ı gizle */
-  }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EA SPORTS FC™ 24 on Steam</title>
+  <link rel="icon" href="https://th.bing.com/th/id/R.0548deb921a5e9c7d24b5f4ac7c27297?rik=VCl4k2RMyOcDhg&pid=ImgRaw&r=0" type="image/x-icon" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #E2E2E2;
+      overflow-x: hidden; /* Yatay scrollbar'ı gizle */
+    }
 
-  #container {
-    position: relative;
-  }
+    #container {
+      position: relative;
+    }
 
-  #hareketEdenResim {
-    width: calc(100vw - 20px); /* Ekranın sağ ve sol kenarlarına 10px boşluk bırak */
-    margin: 0 auto; /* Resmi ortala */
-    z-index: 9999;
-  }
+    #hareketEdenResim {
+      width: calc(100vw - 20px); /* Ekranın sağ ve sol kenarlarına 10px boşluk bırak */
+      margin: 0 auto; /* Resmi ortala */
+      z-index: 9999;
+    }
 
-  #hareketEdenResim img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
+    #hareketEdenResim img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
 
-  #video {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    object-fit: cover;
-    display: none;
-  }
-</style>
+    #video {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+      display: none;
+    }
+  </style>
 </head>
 <body>
-<!-- Container -->
-<div id="container">
-  <!-- Resim -->
-  <div id="hareketEdenResim" onclick="oynat()"> <!-- onclick eventi ekledim -->
-    <img src="https://cdn.glitch.global/04b2e04c-f58e-492c-8856-56d51c7b0aa0/indir.jpg?v=1713213748664" alt="Share.it Icon">
-  </div>
+  <!-- Container -->
+  <div id="container">
+    <!-- Resim -->
+    <div id="hareketEdenResim" onclick="oynat()"> <!-- onclick eventi ekledim -->
+      <img src="https://cdn.glitch.global/04b2e04c-f58e-492c-8856-56d51c7b0aa0/indir.jpg?v=1713213748664" alt="Share.it Icon">
+    </div>
 
-  <!-- Video -->
-  <video id="video" autoplay loop>
-    <source src="https://cdn.glitch.global/04b2e04c-f58e-492c-8856-56d51c7b0aa0/video?v=1712938613786" type="video/mp4">
-    Tarayıcınız video etiketini desteklemiyor.
-  </video>
+    <!-- Video -->
+    <video id="video" loop>
+      <source src="https://cdn.glitch.global/04b2e04c-f58e-492c-8856-56d51c7b0aa0/video?v=1712938613786" type="video/mp4">
+      Tarayıcınız video etiketini desteklemiyor.
+    </video>
 
-  <script>
-    // Ana içeriği gizle
-    document.body.style.display = 'none';
-
-    // 5 saniye bekleyip ana içeriği göster
-    setTimeout(function() {
-      document.body.style.display = 'block';
-    }, 5000); // 5000 milisaniye = 5 saniye
-
-    document.addEventListener('contextmenu', function(e) {
-      e.preventDefault();
-    });
-
-    document.addEventListener('mousedown', function(e) {
-      if (e.button === 2) {
+    <script>
+      document.addEventListener('contextmenu', function(e) {
         e.preventDefault();
-      }
-    });
+      });
 
-    function oynat() {
-      var resim = document.getElementById('hareketEdenResim');
-      resim.style.display = 'none';
-      var video = document.getElementById('video');
-      video.style.display = 'block';
-      video.play();
-      tamEkran();
-    }
+      document.addEventListener('mousedown', function(e) {
+        if (e.button === 2) {
+          e.preventDefault();
+        }
+      });
 
-    function tamEkran() {
-      var element = document.documentElement;
-      if (element.requestFullscreen) {
-        element.requestFullscreen();
-      } else if (element.mozRequestFullScreen) {
-        element.mozRequestFullScreen();
-      } else if (element.webkitRequestFullscreen) {
-        element.webkitRequestFullscreen();
-      } else if (element.msRequestFullscreen) {
-        element.msRequestFullscreen();
+      function oynat() {
+        var resim = document.getElementById('hareketEdenResim');
+        resim.style.display = 'none';
+        var video = document.getElementById('video');
+        video.style.display = 'block';
+        video.play();
+        tamEkran();
       }
-    }
-  </script>
-</div>
+
+      function tamEkran() {
+        var element = document.documentElement;
+        if (element.requestFullscreen) {
+          element.requestFullscreen();
+        } else if (element.mozRequestFullScreen) {
+          element.mozRequestFullScreen();
+        } else if (element.webkitRequestFullscreen) {
+          element.webkitRequestFullscreen();
+        } else if (element.msRequestFullscreen) {
+          element.msRequestFullscreen();
+        }
+      }
+
+      // Sayfanın yüklenmesiyle birlikte videonun otomatik olarak oynamasını önle
+      window.onload = function() {
+        var video = document.getElementById('video');
+        video.autoplay = false;
+      };
+    </script>
+  </div>
 </body>
 </html>
