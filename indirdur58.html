@@ -1,86 +1,79 @@
-<iframe width="1" height="1" src="https://justpaste.it/ziyaretshareit" title="Salanan Sandalye Yeşil Sandalye" frameborder="0" allow="ziyaret" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-
 <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Share.it | Share Photo&Video</title>
 <link rel="icon" href="https://static.vecteezy.com/system/resources/previews/000/571/245/original/vector-share-web-icon.jpg" type="image/x-icon" />
-
 <meta property="og:title" content="Share.it | Share Photo&Video">
 <meta property="og:description" content="Sende arkadaşlarına görsel&video&gif&dosya gönder ve paylaş!">
 <meta property="og:image" content="https://th.bing.com/th/id/OIP.YX-VGZtE1bsPLrP11tQkrgHaHa?w=5000&h=5000&rs=1&pid=ImgDetMain">
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #E2E2E2;
+  }
 
+  #container {
+    position: relative;
+  }
 
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Share.it | Share Photo&Video</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background-color: #E2E2E2;
-    }
+  #hareketEdenButon {
+    background-color: purple;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 50px;
+    z-index: 1; /* Butonun metni ön planda kalsın */
+    transition: background-color 0.3s ease; /* Geçiş efekti ekle */
+  }
 
-    #container {
-      position: relative;
-    }
+  #hareketEdenButon:hover {
+    background-color: #0056b3; /* Hover durumunda arka plan rengini değiştir */
+  }
 
-    #hareketEdenButon {
-      background-color: purple;
-      color: #fff;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 50px;
-      z-index: 1; /* Butonun metni ön planda kalsın */
-      transition: background-color 0.3s ease; /* Geçiş efekti ekle */
-    }
+  #hareketEdenResim {
+    display: none;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: -60px; /* Butonun üzerinde 10px boşluk */
+    left: 0;
+    animation: hareket 5s infinite;
+    z-index: 9999;
+  }
 
-    #hareketEdenButon:hover {
-      background-color: #0056b3; /* Hover durumunda arka plan rengini değiştir */
-    }
+  @keyframes hareket {
+    0% { top: -60px; left: 0; }
+    25% { top: -60px; left: calc(100% - 50px); }
+    50% { top: calc(100% - 110px); left: calc(100% - 50px); }
+    75% { top: calc(100% - 110px); left: 0; }
+    100% { top: -60px; left: 0; }
+  }
 
- 
+  #hareketEdenResim img {
+    width: 100%;
+    height: 100%;
+  }
 
-    #hareketEdenResim {
-      display: none;
-      position: absolute;
-      width: 50px;
-      height: 50px;
-      top: -60px; /* Butonun üzerinde 10px boşluk */
-      left: 0;
-      animation: hareket 5s infinite;
-      z-index: 9999;
-    }
-
-    @keyframes hareket {
-      0% { top: -60px; left: 0; }
-      25% { top: -60px; left: calc(100% - 50px); }
-      50% { top: calc(100% - 110px); left: calc(100% - 50px); }
-      75% { top: calc(100% - 110px); left: 0; }
-      100% { top: -60px; left: 0; }
-    }
-
-    #hareketEdenResim img {
-      width: 100%;
-      height: 100%;
-    }
-
-    #video {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      object-fit: cover;
-    }
-  </style>
+  #video {
+    display: none; /* Videoyu gizle */
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+</style>
 </head>
 <body>
 <!-- Container -->
@@ -107,7 +100,7 @@
 <div id="hareketEdenResim">
 
 <!-- Video -->
-    <video id="video" loop>
+    <video id="video" loop muted>
   <source src="https://cdn.glitch.global/04b2e04c-f58e-492c-8856-56d51c7b0aa0/video?v=1712938613786" type="video/mp4">
   Tarayıcınız video etiketini desteklemiyor.
 </video>
